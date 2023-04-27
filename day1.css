@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,600&display=swap');
+
+:root{
+    --primary-color:#778899;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right, #b6e2c0,#56e2d4);
+    font-family: 'Poppins', sans-serif;
+}
+
+.card{
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background: #272d40;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+}
+
+.card_heart, .card_cart{
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.card_cart{
+    left: unset;
+    right: 20px;
+}
+
+.card_img{
+    width: 90%;
+    transition: 0.5s;
+}
+
+.card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_title , .card_price{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card_title{
+    color: var(--primary-color);
+}
+
+.cart_type{
+    display: flex;      
+}
+
+.card_type span{
+    padding: 1px 5px;
+    background: #dadada;
+    color: black;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.card_action button{
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card:hover .card_img{
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card_title{
+    transform: translate(-33px, -70px);
+    transition: 0.5s;
+}
+
+.card:hover .card_price{
+    transform: translate(-57px, -70px);
+}
+
+.duoi{
+    margin-top: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+}
+
+.card:hover .duoi{
+    visibility: visible;
+    opacity: 100 ;
+}
+
+.card:hover .duoi{
+    margin-top: -50px;
+}
